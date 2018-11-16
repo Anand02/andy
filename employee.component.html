@@ -1,0 +1,19 @@
+<!-- <p>
+  employee works!
+</p> -->
+<h1>Employee Details</h1>
+<!-- <input type="text"  [(ngModel)]="searchText" 
+           class="form-control" placeholder="Search By Category" /> -->
+<table>
+  <th>Name</th><th>Age</th><th>Salary</th><th>Action</th>
+  <tr *ngFor="let x of emps ">
+      <td>{{x.value.name}}</td>
+      <td>{{x.value.age}}</td>
+      <td>{{x.value.salary}}</td>
+      <td>
+        <button (click)="delEmp(x.key)"> Del</button>&nbsp;
+        <button (click)="editEmp(x)"> Edit</button> 
+      </td>
+  </tr>
+  
+</table>
